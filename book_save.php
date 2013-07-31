@@ -30,9 +30,9 @@ else
 		$itemid = $_GET['itemid'];
 		
 		//增加订单数据
-		$sql = "INSERT INTO book (bookid, itemid, userid, pay, time) VALUES (NULL, '$itemid', '$userid', 0, NOW())";
+		$sql = "INSERT INTO book (bookid, itemid, userid, bookpay, time) VALUES (NULL, '$itemid', '$userid', 0, NOW())";
 		mysql_query($sql, $con);
-		//echo "<br>sql error: ".mysql_error();
+		echo "<br>sql : ".mysql_error();
 		//echo "<br>New success!<br>";
 		
 		//获取套餐价格

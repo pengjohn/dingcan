@@ -111,7 +111,21 @@ if(TimeRemain >=(10*60*60+30*60) )
 }
 else
 {
-	Temp='距离订餐截止还剩:'+TimeRemain+'秒'
+	Temp='距离订餐截止还剩:'
+	if(Hourleft<10)
+		Temp=Temp+'0'+Hourleft+':'
+	else
+		Temp=Temp+Hourleft+':'
+	
+	if(Minuteleft<10)
+		Temp=Temp+'0'+Minuteleft+':'
+	else
+		Temp=Temp+Minuteleft+':'
+
+	if(Secondleft<10)
+		Temp=Temp+'0'+Secondleft
+	else
+		Temp=Temp+Secondleft		
 }
 
 document.form_timer.left.value=Temp;  
