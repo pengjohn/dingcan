@@ -46,11 +46,15 @@ $index = 1;
 $shop = -1;
 while($row = mysql_fetch_array($result))
 {
-	 echo $row['shop_id'].". ".$row['shop_name']." [".$row['shop_phone']."][<a href=admin_shop_edit.php?shop_id=".$row['shop_id'].">修改</a>]<br>";
-   $index = $index+1;
+    echo $row['shop_id'].". ".$row['shop_name']." [".$row['shop_phone']."]";
+    echo "[<a href=admin_shop_edit.php?shop_id=".$row['shop_id'].">修改</a>]";
+    echo "[<a href=admin_shop_del.php?shop_id=".$row['shop_id'].">删除</a>]<br>\n";
+    $index = $index+1;
 }
 ?>
 
+<br>-----------------------------------------------<br>
+<a href=index.php>返回首页</a>
 </body>
 </html>
 <?php include 'conn_db_close.php'; ?>

@@ -81,6 +81,8 @@ while($row = mysql_fetch_array($result))
 }
 ?>
 
+<br>-----------------------------------------------<br>
+<a href=index.php>返回首页</a>
 </body>
 </html>
 <?php include 'conn_db_close.php'; ?>
